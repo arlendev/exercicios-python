@@ -1,0 +1,12 @@
+frase = str(input('Digite uma frase: ')).upper().strip()
+print('A letra A aparece {} vezes na frase.'.format(frase.count('A')))
+print('A primeira letra A apareceu na posição {}'.format(frase.find('A')+1))
+print('A última letra A apareceu na posição {}' .format(frase.rfind('A')+1))
+
+'''
+frase = str(input('Escreva uma frase:')).upper().strip()
+cont = frase.count('A')
+conta = frase.find('A')
+con = frase.rfind('A')
+print('A frase tem {} A no total,\nO primeiro A aparece na posição {},\nO ultimo A aparece na posição {}'.format(cont, conta, con))
+'''
