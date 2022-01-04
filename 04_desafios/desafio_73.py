@@ -1,0 +1,12 @@
+classif = ('Atlético-MG', 'Flamengo', 'Palmeiras', 'Fortaleza', 'Corinthians', 'Bragantino', 'Fluminense', 
+            'América', 'Atlético-GO', 'Santos', 'Ceará-SC', 'Internacional', 'São Paulo', 'Athletico-PR', 'Cuiabá', 'Juventude', 'Grêmio', 'Bahia', 'Sport Recife', 'Chapecoense')
+print('=' *50)
+print(f'Lista de classificação do brasileirão: {classif}')
+print('=' *50)
+print(f'Os 5 primeiros classificados são: {classif[0:5]}')
+print('=' *50)
+print(f'Os 4 últimos são: {classif[-4:]}')
+print('=' *50)
+print(f'Os times em ordem alfabética são: ', (sorted(classif)))
+print('=' *50)
+print(f'O Chapecoense está na {classif.index("Chapecoense")+1}ª posição.')
