@@ -1,9 +1,11 @@
 matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 spar = mai = scol = 0
-# este bloco é para preencher a patriz
+
+# este bloco é para preencher a matriz
 for l in range(0, 3):  # um for na linha
    for c in range(0, 3):  # um for na coluna, dentro da linha
       matriz[l][c] = int(input(f'Digite um valor para [{l}, {c}]: '))
+
 # este bloco é mostrar a matriz na tela
 print('-=' * 30)
 for l in range(0, 3):
