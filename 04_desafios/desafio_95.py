@@ -46,3 +46,53 @@ while True:
          print(f'   No jogo {i+1} fez {g} gols.')
    print('-' * 40)
 print('<< VOLTE SEMPRE >>')
+
+'''
+individual = dict()
+jogadores = list()
+temp = list()
+jogos = list()
+gols = list()
+print('-=' * 26 + '-')
+while True:
+    individual.clear()
+    individual['Jogador'] = str(input('Nome: ')).strip().capitalize()
+    individual['Jogos'] = int(input(f'Quantos jogos {individual["Jogador"]} jogou? '))
+    for c in range(individual['Jogos']):
+        gol = (int(input(f'Digite quantos gols ele fez na {c+1}ª partida: ')))
+        temp.append(gol)
+    print('-=' * 26 + '-')
+    jogos.append(individual['Jogos'])
+    gols.append(temp[:])
+    individual['Gols'] = temp.copy()
+    individual['Total'] = sum(temp)
+    temp.clear()
+    jogadores.append(individual.copy())
+    while True:
+        o = str(input('Deseja continuar? [S/N]: ')).strip().upper()
+        if o in 'SN':
+            break
+        print('ERRO! Digite apenas S ou N!')
+    if o == 'N':
+        break
+print('-=' * 26 + '-')
+print(f'{"Cód"} {"Nome":<15} {"Gols":<25} {"Total":<25}')
+print('-=' * 26 + '-')
+for k, v in enumerate(jogadores):
+    print(f'({str(k)}) {str(v["Jogador"]):<15} {str(v["Gols"]):<25} {str(v["Total"]):<25}')
+print('-=' * 26 + '-')
+
+while True:
+    e = int(input('Digite o código do jogador a ser analisado (999 finaliza): '))
+    if e in range(len(jogadores)) and e != 999:
+        print(f'O jogador: {jogadores[e]["Jogador"]} marcou:')
+        for c in range(jogos[e]):
+            print(f' -> Na {c+1}ª partida, marcou: {gols[e][c]} gols')
+        print('-=' * 26 + '-')
+    elif e == 999:
+        print('-=' * 26 + '-')
+        break
+    else:
+        print('Código ERRADO! Digite novalmente!')
+print(f'{"<< FINALIZADO >>":^33}')
+'''
