@@ -2,7 +2,7 @@
 
 c = 1  #contador
 fat = 1  
-n = int(input("Digite o valor de n: "))
+n = int(input('Digite o valor de n: '))
 
 while c <= n:
     fat = fat * c
