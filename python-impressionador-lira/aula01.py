@@ -18,12 +18,17 @@ time.sleep(5)
 # Passo 2: Navegar até o local do relatório (entrar na pasta Exportar)
 pyautogui.click(x=374, y=303, clicks=2)
 time.sleep(2)
+pyautogui.click(x=384, y=311, clicks=2)
+time.sleep(2)
 
 # Passo 3: Fazer o download do relatório
-pyautogui.click(x=510, y=378)
-pyautogui.click(x=1108, y=176)
-pyautogui.click(x=951, y=719)
-time.sleep(5)
+pyautogui.click(x=96, y=148, clicks=1)
+time.sleep(2)
+pyautogui.click(x=163, y=425, clicks=1)
+time.sleep(2)
+pyautogui.click(x=460, y=430, clicks=1)
+
+time.sleep(5) # Esperar o download
 
 # Passo 4: Calcular os indicadores
 import pandas as pd
