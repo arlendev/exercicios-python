@@ -33,7 +33,11 @@ time.sleep(5) # Esperar o download
 # Passo 4: Calcular os indicadores
 import pandas as pd
 
-tabela = pd.read_excel(r"C://Users/alonp/Downloads/Vendas - Dez.xlsx")
-display(tabela)
-faturamento = tabela["Valor Final"].sum()
-quantidade = tabela["Quantidade"].sum()
+tabela = pd.read_excel
+tabela = pd.read_excel(r"C:\Users\.....") # caminho do download do xlsx
+print(tabela)
+faturamento = tabela['Valor Final'].sum()
+quantidade = tabela['Quantidade'].sum()
+
+print(f'O faturamento totao foi R$ {faturamento:.2f}')
+print(f'A quantidade de produtos vendidos foi {quantidade}')
