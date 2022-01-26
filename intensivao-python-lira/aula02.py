@@ -2,10 +2,13 @@
 import pandas as pd
 
 tabela = pd.read_csv('telecom_users.csv')
-print(tabela)
+# print(tabela)
 
 tabela = tabela.drop('Unnamed: 0', axis = 1)
-print(tabela)
+# print(tabela)
+print(tabela.info())
+tabela['TotalGasto'] = pd.to_numeric(tabela['TotalGasto'], errors='coerce')
+print(tabela.info())
 # Passo 2: Visualizar a base de dados
 # - Entender quais as informações tão disponíveis
 # - Descobrir as cagadas da base de dados
