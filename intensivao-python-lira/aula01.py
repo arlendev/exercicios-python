@@ -34,7 +34,7 @@ time.sleep(5) # Esperar o download
 import pandas as pd
 
 tabela = pd.read_excel
-tabela = pd.read_excel(r'C:\Users\......') # caminho do xlsx
+tabela = pd.read_excel('Vendas - Dez.xlsx') # caminho do xlsx
 print(tabela)
 faturamento = tabela['Valor Final'].sum()
 quantidade = tabela['Quantidade'].sum()
@@ -52,7 +52,7 @@ time.sleep(5)
 # Passo 6: Enviar por e-mail o resultado
 pyautogui.click(x=109, y=183)
 
-pyautogui.write('xyz@gmail.com') # colocar o e-mail de destino
+pyautogui.write('possamaiit@gmail.com') # colocar o e-mail de destino
 pyautogui.press('tab') # seleciona o email
 # escreve outro email
 # tab
