@@ -44,6 +44,12 @@ print(cotacao_ouro)
 
 navegador.quit()
 
+# Passo 4: Importar a lista de produtos
+import pandas as pd
+
+tabela = pd.read_excel("Produtos.xlsx")
+display(tabela)
+
 # Passo 5: Análise Mais completa
 
 # etapa 1: criar o gráfico
