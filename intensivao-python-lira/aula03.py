@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 # navegador = webdriver.Chrome(options=chrome_options)
 
 # abrir um navegador
-navegador = webdriver.Chrome("chrome.exe")
+navegador = webdriver.Chrome("chromedriver.exe")
 
 navegador.get("https://www.google.com/")
 
