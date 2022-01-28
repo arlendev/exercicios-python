@@ -67,4 +67,7 @@ tabela["Preço de Venda"] = tabela["Preço de Compra"] * tabela["Margem"]
 
 display(tabela)
 
+# Passo 6: Salvar os novos preços dos produtos
+tabela.to_excel("Produtos Novo.xlsx", index=False)
+
 # etapa 1: criar o gráfico
