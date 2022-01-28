@@ -50,6 +50,21 @@ import pandas as pd
 tabela = pd.read_excel("Produtos.xlsx")
 display(tabela)
 
-# Passo 5: Análise Mais completa
+# Passo 5: Recalcular o preço de cada produto
+# atualizar a cotação
+# nas linhas onde na coluna "Moeda" = Dólar
+tabela.loc[tabela["Moeda"] == "Dólar", "Cotação"] = float(cotacao_dolar)
+tabela.loc[tabela["Moeda"] == "Euro", "Cotação"] = float(cotacao_euro)
+tabela.loc[tabela["Moeda"] == "Ouro", "Cotação"] = float(cotacao_ouro)
+
+# atualizar o preço base reais (preço base original * cotação)
+tabela["Preço de Compra"] = tabela["Preço Original"] * tabela["Cotação"]
+
+# atualizar o preço final (preço base reais * Margem)
+tabela["Preço de Venda"] = tabela["Preço de Compra"] * tabela["Margem"]
+
+# tabela["Preço de Venda"] = tabela["Preço de Venda"].map("R${:.2f}".format)
+
+display(tabela)
 
 # etapa 1: criar o gráfico
