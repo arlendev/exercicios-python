@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import pyautogui
 import time
 
-# para rodar o chrome em 2º plano
+# #para rodar o chrome em 2º plano
 # from selenium.webdriver.chrome.options import Options
 # chrome_options = Options()
 # chrome_options.headless = True 
@@ -48,30 +48,30 @@ print(cotacao_ouro)
 
 navegador.quit()
 
-# # Passo 4: Importar a lista de produtos
-# import pandas as pd
+# Passo 4: Importar a lista de produtos
+import pandas as pd
 
-# tabela = pd.read_excel("Produtos.xlsx")
-# display(tabela)
+tabela = pd.read_excel("Produtos.xlsx")
+print(tabela)
 
-# # Passo 5: Recalcular o preço de cada produto
-# # atualizar a cotação
-# # nas linhas onde na coluna "Moeda" = Dólar
-# tabela.loc[tabela["Moeda"] == "Dólar", "Cotação"] = float(cotacao_dolar)
-# tabela.loc[tabela["Moeda"] == "Euro", "Cotação"] = float(cotacao_euro)
-# tabela.loc[tabela["Moeda"] == "Ouro", "Cotação"] = float(cotacao_ouro)
+# Passo 5: Recalcular o preço de cada produto
+# atualizar a cotação
+# nas linhas onde na coluna "Moeda" = Dólar
+tabela.loc[tabela["Moeda"] == "Dólar", "Cotação"] = float(cotacao_dolar)
+tabela.loc[tabela["Moeda"] == "Euro", "Cotação"] = float(cotacao_euro)
+tabela.loc[tabela["Moeda"] == "Ouro", "Cotação"] = float(cotacao_ouro)
 
-# # atualizar o preço base reais (preço base original * cotação)
-# tabela["Preço de Compra"] = tabela["Preço Original"] * tabela["Cotação"]
+# atualizar o preço base reais (preço base original * cotação)
+tabela["Preço de Compra"] = tabela["Preço Original"] * tabela["Cotação"]
 
-# # atualizar o preço final (preço base reais * Margem)
-# tabela["Preço de Venda"] = tabela["Preço de Compra"] * tabela["Margem"]
+# atualizar o preço final (preço base reais * Margem)
+tabela["Preço de Venda"] = tabela["Preço de Compra"] * tabela["Margem"]
 
-# # tabela["Preço de Venda"] = tabela["Preço de Venda"].map("R${:.2f}".format)
+# tabela["Preço de Venda"] = tabela["Preço de Venda"].map("R${:.2f}".format)
 
-# display(tabela)
+print(tabela)
 
-# # Passo 6: Salvar os novos preços dos produtos
-# tabela.to_excel("Produtos Novo.xlsx", index=False)
+# Passo 6: Salvar os novos preços dos produtos
+tabela.to_excel("Produtos Novo.xlsx", index=False)
 
-# # etapa 1: criar o gráfico
+# etapa 1: criar o gráfico
