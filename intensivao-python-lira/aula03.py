@@ -4,11 +4,11 @@ from selenium.webdriver.common.by import By
 import pyautogui
 import time
 
-# #para rodar o chrome em 2º plano
-# from selenium.webdriver.chrome.options import Options
-# chrome_options = Options()
-# chrome_options.headless = True 
-# navegador = webdriver.Chrome(options=chrome_options)
+#para rodar o chrome em 2º plano
+from selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+chrome_options.headless = True 
+navegador = webdriver.Chrome(options=chrome_options)
 
 # abrir um navegador
 navegador = webdriver.Chrome()
