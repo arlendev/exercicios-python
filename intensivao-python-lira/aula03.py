@@ -67,3 +67,4 @@ print(tabela)
 tabela.to_excel("Produtos Novo.xlsx", index=False)
 
 # etapa 1: criar o gráfico
+ 
