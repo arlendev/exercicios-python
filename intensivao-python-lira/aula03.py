@@ -16,34 +16,25 @@ navegador = webdriver.Chrome()
 navegador.get("https://www.google.com/")
 pyautogui.click(x=804, y=923, clicks=1)
 
-
 # Passo 1: Pegar a cotação do Dólar
-navegador.find_element(By.XPATH,
-    '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys("cotação dólar")
+navegador.get("https://www.melhorcambio.com/dolar-hoje")
 
-navegador.find_element(By.XPATH,
-    '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(Keys.ENTER)
-
-cotacao_dolar = navegador.find_element(By.XPATH,
-    '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]').get_attribute("data-value") 
+cotacao_dolar = navegador.find_element(By.XPATH, '//*[@id="comercial"]').get_attribute("value")
+cotacao_dolar = cotacao_dolar.replace(",", ".") # troca virgula por ponto
 print(cotacao_dolar)
 
 # Passo 2: Pegar a cotação do Euro
-navegador.get("https://www.google.com/")
-navegador.find_element(By.XPATH,
-    '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys("cotação euro")
-navegador.find_element(By.XPATH,
-    '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(Keys.ENTER)
+navegador.get("https://www.melhorcambio.com/euro-hoje")
 
-cotacao_euro = navegador.find_element(By.XPATH,
-    '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]').get_attribute("data-value")
+cotacao_euro = navegador.find_element(By.XPATH, '//*[@id="comercial"]').get_attribute("value")
+cotacao_euro = cotacao_euro.replace(",", ".") # troca virgula por ponto
 print(cotacao_euro)
 
 # Passo 3: Pegar a cotação do Ouro
 navegador.get("https://www.melhorcambio.com/ouro-hoje")
 
 cotacao_ouro = navegador.find_element(By.XPATH, '//*[@id="comercial"]').get_attribute("value")
-cotacao_ouro = cotacao_ouro.replace(",", ".")
+cotacao_ouro = cotacao_ouro.replace(",", ".") # troca virgula por ponto
 print(cotacao_ouro)
 
 navegador.quit()
