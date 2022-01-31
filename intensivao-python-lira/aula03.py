@@ -59,7 +59,8 @@ tabela["Preço de Compra"] = tabela["Preço Original"] * tabela["Cotação"]
 tabela["Preço de Venda"] = tabela["Preço de Compra"] * tabela["Margem"]
 
 # tabela["Preço de Venda"] = tabela["Preço de Venda"].map("R${:.2f}".format)
-
+print('-=' *45)
+print('Impressão da tabela com os dados atualizados dentro do python - não atualizado na base')
 print(tabela)
 
 # Passo 6: Salvar os novos preços dos produtos
