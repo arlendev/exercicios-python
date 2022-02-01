@@ -1,10 +1,5 @@
-seq = []
-while True:
-    numero = int(input())
-    if (numero != 0):
-        seq.append(numero)
-    else:
-        break
-
-for i in seq[::-1]:
-    print (i)
+def soma_elementos(list):
+    soma = 0
+    for i in list:
+        soma = soma + i
+    return soma
