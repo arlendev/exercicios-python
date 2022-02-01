@@ -1,6 +1,9 @@
-def remove_repetidos(lista):
-    nova_lista = []
+def maior_elemento(lista):
+    maior = lista[0]
+
     for i in lista:
-        if i not in nova_lista:
-            nova_lista.append(i)
-    return sorted(nova_lista)
+        for j in lista:
+            if i < j:
+                maior = j
+
+    return maior
