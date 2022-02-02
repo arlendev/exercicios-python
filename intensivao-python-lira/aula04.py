@@ -28,3 +28,11 @@ modelo_arvoredecisao = RandomForestRegressor()
 # treina as inteligencias artificias
 modelo_regressaolinear.fit(x_treino, y_treino)
 modelo_arvoredecisao.fit(x_treino, y_treino)
+
+# criar as previsoes
+previsao_regressaolinear = modelo_regressaolinear.predict(x_teste)
+previsao_arvoredecisao = modelo_arvoredecisao.predict(x_teste)
+
+# comparar os modelos
+print(metrics.r2_score(y_teste, previsao_regressaolinear))
+print(metrics.r2_score(y_teste, previsao_arvoredecisao))  
