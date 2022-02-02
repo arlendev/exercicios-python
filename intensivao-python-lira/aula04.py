@@ -5,6 +5,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
+from sklearn import metrics
 
 tabela = pd.read_csv("advertising.csv")
 print(tabela)
@@ -23,3 +24,7 @@ x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.3)
 # cria as inteligencias aritificiais
 modelo_regressaolinear = LinearRegression()
 modelo_arvoredecisao = RandomForestRegressor()
+
+# treina as inteligencias artificias
+modelo_regressaolinear.fit(x_treino, y_treino)
+modelo_arvoredecisao.fit(x_treino, y_treino)
