@@ -1,13 +1,13 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sb
+import seaborn as sns
 
 tabela = pd.read_csv("advertising.csv")
 print(tabela)
 
 mask = np.triu(np.ones_like(tabela.corr())) 
-dataplot = sb.heatmap(tabela.corr(), cmap="Wistia", annot=True, mask=mask) 
+sns.heatmap(tabela.corr(), cmap="Wistia", annot=True, mask=mask) 
 plt.show() 
 
 from sklearn.model_selection import train_test_split
