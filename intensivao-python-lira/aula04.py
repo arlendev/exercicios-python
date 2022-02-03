@@ -45,3 +45,12 @@ tabela_auxiliar["Previsoes Regressao Linear"] = previsao_regressaolinear
 plt.figure(figsize=(15,6))
 sns.lineplot(data=tabela_auxiliar)
 plt.show()
+
+# Como fazer uma nova previsao
+# importar a nova_tabela com o pandas (a nova tabela tem que ter os dados de TV, Radio e Jornal)
+# previsao = modelo_randomforest.predict(nova_tabela)
+# print(previsao)
+nova_tabela = pd.read_csv("novos.csv")
+display(nova_tabela)
+previsao = modelo_arvoredecisao.predict(nova_tabela)
+print(previsao)
