@@ -51,6 +51,12 @@ plt.show()
 # previsao = modelo_randomforest.predict(nova_tabela)
 # print(previsao)
 nova_tabela = pd.read_csv("novos.csv")
-display(nova_tabela)
+print(nova_tabela)
 previsao = modelo_arvoredecisao.predict(nova_tabela)
 print(previsao)
+
+sns.barplot(x=x_treino.columns, y=modelo_arvoredecisao.feature_importances_)
+plt.show()
+
+# Caso queira comparar Radio com Jornal
+# print(df[["Radio", "Jornal"]].sum())
