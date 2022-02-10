@@ -1,14 +1,14 @@
-def resumo(preco=0, aum=0, red=0):
-    print('--' * 15)
-    print(f'{"RESUMO DO VALOR":^30}')
-    print('--' * 15)
-    res = preco
-    aumento = aum
-    reducao = red
+"""
+Desafio 112
+Problema: Dentro do pacote utilidadesCeV que criamos no desafio 111, temos um
+          módulo chamado dado. Crie uma função chamada leiaDinheiro() que seja
+          capaz de funcionar como a função input(), mas com uma validação de dados
+          para aceitar apenas valores que sejam monetários.
+Resolução do problema:
+"""
+from ex112_modulo.utilidadesCeV import moeda
+from ex112_modulo.utilidadesCeV import dado
 
-    print(f'{"Preço Analisado:":<20} {moeda(res)}')
-    print(f'{"Dobro do Preço:":<20} {moeda(dobro(res))}')
-    print(f'{"Metade do Preço:":<20} {moeda(metade(res))}')
-    print(f'{aum}{"% de aumento:":<18} {moeda(aumentar(res, aumento))}')
-    print(f'{reducao}{"% de redução:":<18} {moeda(diminuir(res, reducao))}')
-    print('--' * 15)
+preco = dado.leiaDinheiro('Informe um preço: R$')
+
+moeda.resumo(preco, 65, 25)
