@@ -21,7 +21,7 @@ x = tabela.drop("Vendas", axis=1)
 
 x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.3)
 
-# cria as inteligencias aritificiais
+# para criar as inteligencias aritificiais
 modelo_regressaolinear = LinearRegression()
 modelo_arvoredecisao = RandomForestRegressor()
 
